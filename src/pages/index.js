@@ -20,7 +20,6 @@ export default function Home() {
   const [sanawjy, setSanawjy] = useState(getArray("s"));
   const [maydalawjy, setMaydalawjy] = useState(getArray("m"));
 
-  const matches = useMediaQuery("(max-width:768px)");
   return (
     <>
       <Head>
@@ -35,8 +34,8 @@ export default function Home() {
         sx={{
           marginBottom: "100px",
           fontSize: {
-            xs: "8px",
-            sm: "10px",
+            xs: "10px",
+            sm: "12px",
             md: "16px",
           },
         }}
@@ -69,7 +68,6 @@ export default function Home() {
                 : null}
             </Typography>
           </Stack>
-          {matches ? <h1>hello</h1> : <h1></h1>}
           <Paper elevation={8}>
             <Typography
               sx={{ textAlign: "center", marginTop: "20px", fontSize: "1.8em" }}
