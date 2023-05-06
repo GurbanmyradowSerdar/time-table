@@ -12,16 +12,7 @@ import {
   TableCell,
   TableHead,
   TableBody,
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Select,
-  Button,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogContentText,
-  DialogActions,
+  useMediaQuery,
 } from "@mui/material";
 
 export default function Home() {
@@ -29,6 +20,7 @@ export default function Home() {
   const [sanawjy, setSanawjy] = useState(getArray("s"));
   const [maydalawjy, setMaydalawjy] = useState(getArray("m"));
 
+  const matches = useMediaQuery("(max-width:768px)");
   return (
     <>
       <Head>
@@ -77,13 +69,14 @@ export default function Home() {
                 : null}
             </Typography>
           </Stack>
+          {matches ? <h1>hello</h1> : <h1></h1>}
           <Paper elevation={8}>
             <Typography
               sx={{ textAlign: "center", marginTop: "20px", fontSize: "1.8em" }}
             >
               Sanawjy hepde
             </Typography>
-            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <Table sx={{ maxWidth: 650 }} aria-label="simple table">
               <TableHead>
                 <TableRow>
                   <TableCell sx={{ fontSize: "1.7em" }}>Gün</TableCell>
@@ -125,7 +118,7 @@ export default function Home() {
             >
               Maýdalawjy hepde
             </Typography>
-            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <Table sx={{ maxWidth: 650 }} aria-label="simple table">
               <TableHead>
                 <TableRow>
                   <TableCell sx={{ fontSize: "1.7em" }}>Gün</TableCell>
