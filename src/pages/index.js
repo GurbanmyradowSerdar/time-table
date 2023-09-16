@@ -34,7 +34,7 @@ export default function Home() {
         sx={{
           marginBottom: "100px",
           fontSize: {
-            xs: "8px",
+            xs: "10px",
             sm: "12px",
             md: "16px",
           },
