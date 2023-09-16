@@ -1,57 +1,62 @@
 export const sanawjy = [
   {
     first_pair: "Ýokary matematika (umumy) / B11",
-    second_pair: "Psihologiýa (söhbet) / B11",
+    second_pair: "Ekologiýa we daşky gurşawy goramak (umumy) / B11",
+    third_pair : "Diskret matematika (amaly) / B11" 
   },
   {
-    first_pair: "Çyzuw (umumy) / W09",
-    second_pair: "Ýokary matematika (amaly) / B11",
+    first_pair: "Türkmenistanyň kanunçylyk esaslary (umumy) / B11",
+    second_pair: "Türkmenistanyň kanunçylyk esaslary (amaly) / B11",
   },
   {
-    first_pair: "Iňlis dili (amaly) / B11",
-    second_pair: "Bedenterbiýe / FOK",
+    first_pair: "Diskret matematika (umumy) / B05",
+    second_pair: "Iňlis dili (amaly) / B11",
   },
   {
-    first_pair: "Psihologiýa (umumy) / B11",
+    first_pair: "Kompýuter grafikasy (umumy) / B11",
     second_pair:
-      "topar-1: Programmirleme (tejribe) / B11\ntopar-2: Fizika (tejribe) / W412",
+      "topar-1: Ýarymgeçirijili elektronika / W202\ntopar-2: MG we banklary (tejribe) / B05",
+    third_pair : "topar-1: MG we banklary (tejribe) / B11\ntopar-2: Diskret matematika (tejribe) / W11"
   },
   {
-    first_pair: "Fizika (umumy) / B11",
-    second_pair: "Programmirleme (umumy) / B11",
+    first_pair: "MG we banklary (umumy) / B11",
+    second_pair: "Turkmen dili (amaly) / B11",
+    third_pair : "Bedenterbiýe / FOK"
   },
   {
-    first_pair: "Programmirleme (amaly) / B11",
-    second_pair: "Fizika (amaly) / B11",
+    first_pair: "Ýarymgeçirijili elektronika (umumy) / B11",
+    second_pair: "Ýokary matematika (amaly) / B11",
   },
 ];
 export const maydalawjy = [
   {
     first_pair: "Ýokary matematika (umumy) / B11",
     second_pair:
-      "topar-1: H.Z.K.T (tejribe) / B11\ntopar-2: Çyzuw (amaly) / W08",
+      "Ekologiýa we daşky gurşawy goramak (amaly) / B11",
+    third_pair : "Diskret matematika (amaly) / B11"
   },
   {
-    first_pair: "H.Z.K.T (umumy) / B11",
-    second_pair: "Ýokary matematika (amaly) / B11",
+    first_pair: "Türkmenistanyň kanunçylyk esaslary (umumy) / B11",
+    second_pair: "topar-1: Kompýuter grafikasy (tejribe) / B11\ntopar-2:Kompýuter grafikasy (tejribe) / B10",
   },
   {
-    first_pair: "Iňlis dili (amaly) / B11",
-    second_pair: "Bedenterbiýe / FOK",
+    first_pair: "Diskret matematika (umumy) / B05",
+    second_pair: "Iňlis dili (amaly) / B11",
   },
   {
-    first_pair:
-      "topar-1: Fizika (tejribe) / B06\ntopar-2: Programmirleme (tejribe) / B11",
+    first_pair: "Kompýuter grafikasy (umumy) / B11",
     second_pair:
-      "topar-1: Çyzuw (amaly) / W08\ntopar-2: H.Z.K.T (tejribe) / B11",
+      "Ýarymgeçirijili elektronika (amaly) / B11",
+    third_pair : "topar-1: Ýokary matematika (amaly) / B10\ntopar-2: Ýarymgeçirijili elektronika (amaly) / W11"
   },
   {
-    first_pair: "Fizika (umumy) / B11",
-    second_pair: "Nazary mehanika (amaly) / B11",
+    first_pair: "MG we banklary (umumy) / B11",
+    second_pair: "Turkmen dili (amaly) / B11",
+    third_pair : "Bedenterbiýe / FOK"
   },
   {
-    first_pair: "Programmirleme (amaly) / B11",
-    second_pair: "Nazary mehanika (umumy) / B11",
+    first_pair: "Ýarymgeçirijili elektronika (umumy) / B11",
+    second_pair: "topar-1: Diskret matematika (tejribe) / B05\ntopar-2: Ýokary matematika (tejribe) / B11",
   },
 ];
 
