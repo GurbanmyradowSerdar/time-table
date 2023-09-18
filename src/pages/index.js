@@ -67,6 +67,12 @@ export default function Home() {
                 ? getToday(new Date().getDay(), getTheNameOfWeek()).second_pair
                 : null}
             </Typography>
+            <Typography sx={{ fontSize: "1.7em", color: "green" }}>
+              {typeof getToday(new Date().getDay(), getTheNameOfWeek()) ===
+              "object"
+                ? getToday(new Date().getDay(), getTheNameOfWeek()).third_pair
+                : null}
+            </Typography>
           </Stack>
           <Paper elevation={8}>
             <Typography
