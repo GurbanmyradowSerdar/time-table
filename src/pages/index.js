@@ -5,14 +5,12 @@ import {
   Paper,
   Stack,
   Typography,
-  TextField,
   Container,
   Table,
   TableRow,
   TableCell,
   TableHead,
   TableBody,
-  useMediaQuery,
 } from "@mui/material";
 
 export default function Home() {
@@ -83,15 +81,34 @@ export default function Home() {
             <Table sx={{ maxWidth: 650 }} aria-label="simple table">
               <TableHead>
                 <TableRow>
-                  <TableCell sx={{ fontSize: "1.7em", p : '0px', pl:'5px', pb:'10px',pt:'10px'  }}>Gün</TableCell>
-                  <TableCell sx={{ fontSize: "1.7em", p : '0px', pb:'10px',pt:'10px'  }} align="right">
+                  <TableCell
+                    sx={{
+                      fontSize: "1.7em",
+                      p: "0px",
+                      pl: "5px",
+                      pb: "10px",
+                      pt: "10px",
+                    }}
+                  >
+                    Gün
+                  </TableCell>
+                  <TableCell
+                    sx={{ fontSize: "1.7em", p: "0px", pb: "10px", pt: "10px" }}
+                    align="right"
+                  >
                     1 para
                   </TableCell>
-                  <TableCell sx={{ fontSize: "1.7em", p : '0px', pb:'10px',pt:'10px'  }} align="right">
+                  <TableCell
+                    sx={{ fontSize: "1.7em", p: "0px", pb: "10px", pt: "10px" }}
+                    align="right"
+                  >
                     2 para
                   </TableCell>
-                  <TableCell sx={{ fontSize: "1.7em", p : '0px', pb:'10px',pt:'10px'  }} align="right">
-                    3 para       
+                  <TableCell
+                    sx={{ fontSize: "1.7em", p: "0px", pb: "10px", pt: "10px" }}
+                    align="right"
+                  >
+                    3 para
                   </TableCell>
                 </TableRow>
               </TableHead>
@@ -99,10 +116,10 @@ export default function Home() {
                 {sanawjy.map((item, index) => (
                   <TableRow
                     key={index}
-                    sx={{ "&:last-child td, &:last-child th": { border: 0 },  }}
+                    sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                   >
                     <TableCell
-                      sx={{ fontSize: "1.2em", p : '0px', pl:'5px' }}
+                      sx={{ fontSize: "1.2em", p: "0px", pl: "5px" }}
                       component="th"
                       scope="row"
                     >
@@ -115,7 +132,13 @@ export default function Home() {
                       {item.second_pair}
                     </TableCell>
                     <TableCell sx={{ fontSize: "1.2em" }} align="right">
-                      {item.third_pair !== null && item.third_pair ? item.third_pair : <span style={{fontStyle : 'italic', color : 'red'}}>boş</span> }
+                      {item.third_pair !== null && item.third_pair ? (
+                        item.third_pair
+                      ) : (
+                        <span style={{ fontStyle: "italic", color: "red" }}>
+                          boş
+                        </span>
+                      )}
                     </TableCell>
                   </TableRow>
                 ))}
@@ -131,15 +154,34 @@ export default function Home() {
             <Table sx={{ maxWidth: 650 }} aria-label="simple table">
               <TableHead>
                 <TableRow>
-                <TableCell sx={{ fontSize: "1.7em", p : '0px', pl:'5px', pb:'10px',pt:'10px'  }}>Gün</TableCell>
-                  <TableCell sx={{ fontSize: "1.7em", p : '0px', pb:'10px',pt:'10px'  }} align="right">
+                  <TableCell
+                    sx={{
+                      fontSize: "1.7em",
+                      p: "0px",
+                      pl: "5px",
+                      pb: "10px",
+                      pt: "10px",
+                    }}
+                  >
+                    Gün
+                  </TableCell>
+                  <TableCell
+                    sx={{ fontSize: "1.7em", p: "0px", pb: "10px", pt: "10px" }}
+                    align="right"
+                  >
                     1 para
                   </TableCell>
-                  <TableCell sx={{ fontSize: "1.7em", p : '0px', pb:'10px',pt:'10px'  }} align="right">
+                  <TableCell
+                    sx={{ fontSize: "1.7em", p: "0px", pb: "10px", pt: "10px" }}
+                    align="right"
+                  >
                     2 para
                   </TableCell>
-                  <TableCell sx={{ fontSize: "1.7em", p : '0px', pb:'10px',pt:'10px'  }} align="right">
-                    3 para       
+                  <TableCell
+                    sx={{ fontSize: "1.7em", p: "0px", pb: "10px", pt: "10px" }}
+                    align="right"
+                  >
+                    3 para
                   </TableCell>
                 </TableRow>
               </TableHead>
@@ -150,7 +192,7 @@ export default function Home() {
                     sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                   >
                     <TableCell
-   sx={{ fontSize: "1.2em", p : '0px', pl:'5px' }}
+                      sx={{ fontSize: "1.2em", p: "0px", pl: "5px" }}
                       component="th"
                       scope="row"
                     >
@@ -163,7 +205,13 @@ export default function Home() {
                       {item.second_pair}
                     </TableCell>
                     <TableCell sx={{ fontSize: "1.2em" }} align="right">
-                      {item.third_pair !== null && item.third_pair ? item.third_pair : <span style={{fontStyle : 'italic', color : 'red'}}>boş</span> }
+                      {item.third_pair !== null && item.third_pair ? (
+                        item.third_pair
+                      ) : (
+                        <span style={{ fontStyle: "italic", color: "red" }}>
+                          boş
+                        </span>
+                      )}
                     </TableCell>
                   </TableRow>
                 ))}
