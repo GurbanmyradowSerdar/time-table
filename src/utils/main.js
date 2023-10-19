@@ -15,7 +15,7 @@ export const sanawjy = [
   {
     first_pair: "Kompýuter grafikasy (umumy) / B11",
     second_pair:
-      "topar-1: Ýarymgeçirijili elektronika / W202\ntopar-2: MG we banklary (tejribe) / B05",
+      "topar-1: Ýarymgeçirijili elektronika (tejribe) / W202\ntopar-2: MG we banklary (tejribe) / B05",
     third_pair : "topar-1: MG we banklary (tejribe) / B11\ntopar-2: Diskret matematika (tejribe) / W11"
   },
   {
@@ -47,7 +47,7 @@ export const maydalawjy = [
     first_pair: "Kompýuter grafikasy (umumy) / B11",
     second_pair:
       "Ýarymgeçirijili elektronika (amaly) / B11",
-    third_pair : "topar-1: Ýokary matematika (amaly) / B10\ntopar-2: Ýarymgeçirijili elektronika (amaly) / W11"
+    third_pair : "topar-1: Ýokary matematika (tejribe) / B10\ntopar-2: Ýarymgeçirijili elektronika (tejribe) / W11"
   },
   {
     first_pair: "MG we banklary (umumy) / B11",
