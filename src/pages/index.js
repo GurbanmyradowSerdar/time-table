@@ -129,7 +129,13 @@ export default function Home() {
                       {item.first_pair}
                     </TableCell>
                     <TableCell sx={{ fontSize: "1.2em" }} align="right">
-                      {item.second_pair}
+                      {item.second_pair !== null && item.second_pair ? (
+                        item.second_pair
+                      ) : (
+                        <span style={{ fontStyle: "italic", color: "red" }}>
+                          boş
+                        </span>
+                      )}
                     </TableCell>
                     <TableCell sx={{ fontSize: "1.2em" }} align="right">
                       {item.third_pair !== null && item.third_pair ? (
@@ -202,7 +208,13 @@ export default function Home() {
                       {item.first_pair}
                     </TableCell>
                     <TableCell sx={{ fontSize: "1.2em" }} align="right">
-                      {item.second_pair}
+                      {item.second_pair !== null && item.second_pair ? (
+                        item.second_pair
+                      ) : (
+                        <span style={{ fontStyle: "italic", color: "red" }}>
+                          boş
+                        </span>
+                      )}
                     </TableCell>
                     <TableCell sx={{ fontSize: "1.2em" }} align="right">
                       {item.third_pair !== null && item.third_pair ? (

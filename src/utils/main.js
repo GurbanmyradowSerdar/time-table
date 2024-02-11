@@ -1,64 +1,68 @@
 export const sanawjy = [
   {
-    first_pair: "Ýokary matematika (umumy) / B11",
-    second_pair: "Ekologiýa we daşky gurşawy goramak (umumy) / B11",
-    third_pair: "Diskret matematika (amaly) / B11",
+    first_pair: "Filosofiýa (umumy) / B11",
+    second_pair: "MG we banklary (amaly) / A04",
+    third_pair: "Elektrotehnika we elektronikanyň esaslary (amaly) / A08",
   },
   {
-    first_pair: "Türkmenistanyň kanunçylyk esaslary (umumy) / B11",
-    second_pair: "Türkmenistanyň kanunçylyk esaslary (amaly) / B11",
-  },
-  {
-    first_pair: "Diskret matematika (umumy) / B05",
-    second_pair: "Iňlis dili (amaly) / B11",
-  },
-  {
-    first_pair: "Kompýuter grafikasy (umumy) / B11",
+    first_pair: "Elektrotehnika we elektronikanyň esaslary (umumy) / B11",
     second_pair:
-      "topar-1: Ýarymgeçirijili elektronika (tejribe) / W202\ntopar-2: MG we banklary (tejribe) / B05",
-    third_pair:
-      "topar-1: MG we banklary (tejribe) / A11\ntopar-2: Diskret matematika (tejribe) / W11",
+      "topar-1: Operasion ulgamlar (tejribe) / A09\ntopar-2: Operasion ulgamlar (tejribe) / B10",
+    third_pair: "Elektrotehnika we elektronikanyň esaslary (umumy) / B11",
+  },
+  {
+    first_pair: "Awtomatiki dolandyryşyň nazaryýeti SD (amaly) / B04",
+    second_pair:
+      "topar-1: MG we banklary (tejribe) / A11\ntopar-2: Elektrotehnika we elektronikanyň esaslary (tejribe) / A10",
+    third_pair: "Operasion ulgamlar (amaly) / A11",
   },
   {
     first_pair: "MG we banklary (umumy) / B11",
-    second_pair: "Turkmen dili (amaly) / B11",
-    third_pair: "Bedenterbiýe / FOK",
+    second_pair: "Bedenterbiýe / FOK",
+    third_pair: "Elektrotehnika we elektronikanyň esaslary (amaly) / B11",
   },
   {
-    first_pair: "Ýarymgeçirijili elektronika (umumy) / B11",
-    second_pair: "Ýokary matematika (amaly) / B11",
+    first_pair: "Önümçilik / praktika",
+  },
+  {
+    first_pair: "Operasion ulgamlar (umumy) / B11",
+    second_pair:
+      "topar-1: Elektrotehnika we elektronikanyň esaslary (tejribe) / W11\ntopar-2: MG we banklary (tejribe) / A09",
+    third_pair: "Iňlis dili (amaly) / A08",
   },
 ];
 export const maydalawjy = [
   {
-    first_pair: "Ýokary matematika (umumy) / B11",
-    second_pair: "Ekologiýa we daşky gurşawy goramak (amaly) / B11",
-    third_pair: "Diskret matematika (amaly) / B11",
+    first_pair: "Filosofiýa (umumy) / B11",
+    second_pair: "Filosofiýa (söhbet) / A04",
+    third_pair: "Elektrotehnika we elektronikanyň esaslary (amaly) / A08",
   },
   {
-    first_pair: "Türkmenistanyň kanunçylyk esaslary (umumy) / B11",
+    first_pair: "Awtomatiki dolandyryşyň nazaryýeti SD (umumy) / B11",
     second_pair:
-      "topar-1: Kompýuter grafikasy (tejribe) / B11\ntopar-2:Kompýuter grafikasy (tejribe) / B10",
+      "topar-1: Operasion ulgamlar (tejribe) / A09\ntopar-2: Operasion ulgamlar (tejribe) / B10",
+    third_pair: "Elektrotehnika we elektronikanyň esaslary (umumy) / B11",
   },
   {
-    first_pair: "Diskret matematika (umumy) / B05",
-    second_pair: "Iňlis dili (amaly) / B11",
-  },
-  {
-    first_pair: "Kompýuter grafikasy (umumy) / B11",
-    second_pair: "Ýarymgeçirijili elektronika (amaly) / B11",
-    third_pair:
-      "topar-1: Ýokary matematika (tejribe) / B10\ntopar-2: Ýarymgeçirijili elektronika (tejribe) / W11",
+    first_pair:
+      "topar-1: Awtomatiki dolandyryşyň nazaryýeti SD (tejribe) / A08\ntopar-2: Awtomatiki dolandyryşyň nazaryýeti SD (tejribe) / A04",
+    second_pair:
+      "topar-1: MG we banklary (tejribe) / A11\ntopar-2: Elektrotehnika we elektronikanyň esaslary (tejribe) / A10",
+    third_pair: "Operasion ulgamlar (amaly) / A11",
   },
   {
     first_pair: "MG we banklary (umumy) / B11",
-    second_pair: "Turkmen dili (amaly) / B11",
-    third_pair: "Bedenterbiýe / FOK",
+    second_pair: "Bedenterbiýe / FOK",
+    third_pair: "Operasion ulgamlar (umumy) / B11",
   },
   {
-    first_pair: "Ýarymgeçirijili elektronika (umumy) / B11",
+    first_pair: "Önümçilik / praktika",
+  },
+  {
+    first_pair: "Operasion ulgamlar (umumy) / B11",
     second_pair:
-      "topar-1: Diskret matematika (tejribe) / B05\ntopar-2: Ýokary matematika (tejribe) / B11",
+      "topar-1: Elektrotehnika we elektronikanyň esaslary (tejribe) / W11\ntopar-2: MG we banklary (tejribe) / A09",
+    third_pair: "Iňlis dili (amaly) / A08",
   },
 ];
 
