@@ -74,9 +74,9 @@ export function getTheNameOfWeek() {
   let weekNumber = Math.ceil(days / 7);
 
   if (typeof weekNumber === "number" && weekNumber % 2 === 0) {
-    return "m";
-  } else if (typeof weekNumber === "number" && weekNumber % 2 === 1) {
     return "s";
+  } else if (typeof weekNumber === "number" && weekNumber % 2 === 1) {
+    return "m";
   }
 }
 
