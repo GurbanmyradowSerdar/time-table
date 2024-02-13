@@ -66,12 +66,13 @@ export const maydalawjy = [
   },
 ];
 
+// ! here we need to change start date to date while we starting the simester
 export function getTheNameOfWeek() {
   const currentDate = new Date();
-  const startDate = new Date(currentDate.getFullYear(), 0, 1);
+  const startDate = new Date("02-11-2024");
   let days = Math.floor((currentDate - startDate) / (24 * 60 * 60 * 1000));
 
-  let weekNumber = Math.ceil(days / 7);
+  let weekNumber = Math.floor(days / 7);
 
   if (typeof weekNumber === "number" && weekNumber % 2 === 0) {
     return "s";
