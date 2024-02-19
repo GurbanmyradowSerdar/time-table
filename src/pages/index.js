@@ -1,4 +1,9 @@
-import { getArray, getTheNameOfWeek, getToday } from "@/utils/main";
+import {
+  getArray,
+  getTheNameOfWeek,
+  getToday,
+  getTomorrow,
+} from "@/utils/main";
 import Head from "next/head";
 import { useState } from "react";
 import {
@@ -44,6 +49,7 @@ export default function Home() {
             <Typography sx={{ fontSize: "2em" }}>
               {getTheNameOfWeek() == "m" ? "Maydalawjy" : "Sanawjy"} hepde
             </Typography>
+            <br />
             <Typography sx={{ fontSize: "1.7em", color: "green" }}>
               Şu gün
             </Typography>
@@ -53,22 +59,60 @@ export default function Home() {
                 ? getToday(new Date().getDay(), getTheNameOfWeek())
                 : null}
             </Typography>
+            <br />
             <Typography sx={{ fontSize: "1.7em", color: "green" }}>
               {typeof getToday(new Date().getDay(), getTheNameOfWeek()) ===
               "object"
                 ? getToday(new Date().getDay(), getTheNameOfWeek()).first_pair
                 : null}
             </Typography>
+            <br />
             <Typography sx={{ fontSize: "1.7em", color: "green" }}>
               {typeof getToday(new Date().getDay(), getTheNameOfWeek()) ===
               "object"
                 ? getToday(new Date().getDay(), getTheNameOfWeek()).second_pair
                 : null}
             </Typography>
+            <br />
             <Typography sx={{ fontSize: "1.7em", color: "green" }}>
               {typeof getToday(new Date().getDay(), getTheNameOfWeek()) ===
               "object"
                 ? getToday(new Date().getDay(), getTheNameOfWeek()).third_pair
+                : null}
+            </Typography>
+            <br />
+            {/* dividing days  */}
+            <Typography sx={{ fontSize: "1.7em", color: "red" }}>
+              Ertir
+            </Typography>
+            <Typography sx={{ fontSize: "1.7em", color: "red" }}>
+              {typeof getTomorrow(new Date().getDay(), getTheNameOfWeek()) ===
+              "string"
+                ? getTomorrow(new Date().getDay(), getTheNameOfWeek())
+                : null}
+            </Typography>
+            <br />
+            <Typography sx={{ fontSize: "1.7em", color: "red" }}>
+              {typeof getTomorrow(new Date().getDay(), getTheNameOfWeek()) ===
+              "object"
+                ? getTomorrow(new Date().getDay(), getTheNameOfWeek())
+                    .first_pair
+                : null}
+            </Typography>
+            <br />
+            <Typography sx={{ fontSize: "1.7em", color: "red" }}>
+              {typeof getTomorrow(new Date().getDay(), getTheNameOfWeek()) ===
+              "object"
+                ? getTomorrow(new Date().getDay(), getTheNameOfWeek())
+                    .second_pair
+                : null}
+            </Typography>
+            <br />
+            <Typography sx={{ fontSize: "1.7em", color: "red" }}>
+              {typeof getTomorrow(new Date().getDay(), getTheNameOfWeek()) ===
+              "object"
+                ? getTomorrow(new Date().getDay(), getTheNameOfWeek())
+                    .third_pair
                 : null}
             </Typography>
           </Stack>
