@@ -110,6 +110,16 @@ export function getTomorrow(date, week) {
   if (date === 0) {
     return "Dynç güni";
   }
+
+  // ! checking if today sunday and tomorrow is monday then we need to change the name of the week
+  if (date === 1) {
+    if (week === "m") {
+      return sanawjy[date - 1];
+    } else {
+      return maydalawjy[date - 1];
+    }
+  }
+
   if (week === "m") {
     return maydalawjy[date - 1];
   } else if (week === "s") {
