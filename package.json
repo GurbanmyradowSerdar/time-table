@@ -1,22 +1,8 @@
 {
-  "name": "time-table-mut-b",
-  "version": "0.1.0",
-  "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "run-tw": "npx tailwindcss -i ./css/input-style.css -o ./css/output-style.css --watch"
   },
-  "dependencies": {
-    "@emotion/react": "^11.10.8",
-    "@emotion/styled": "^11.10.8",
-    "@mui/icons-material": "^5.11.16",
-    "@mui/material": "^5.12.3",
-    "@mui/styled-engine-sc": "^5.12.0",
-    "next": "13.4.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "styled-components": "^5.3.10"
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
   }
 }
