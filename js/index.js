@@ -37,7 +37,8 @@ function getArray(name) {
 
 function getToday(date, week) {
   if (date === 0) {
-    return "Dynç güni";
+    // ! hot fix, use pair to show it in UI instead of rest day
+    return { first_pair: "Dynç güni" };
   }
   if (week === "m") {
     return maydalawjy[date - 1];
@@ -50,11 +51,13 @@ function getTomorrow(date, week) {
   date += 1;
 
   if (date === 7) {
-    return "Dynç güni";
+    // ! hot fix, use pair to show it in UI instead of rest day
+    return { first_pair: "Dynç güni" };
   }
 
   if (date === 0) {
-    return "Dynç güni";
+    // ! hot fix, use pair to show it in UI instead of rest day
+    return { first_pair: "Dynç güni" };
   }
 
   // ! checking if today sunday and tomorrow is monday then we need to change the name of the week
