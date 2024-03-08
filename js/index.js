@@ -1,73 +1,5 @@
-export const sanawjy = [
-  {
-    first_pair: "Filosofiýa (umumy) / B11",
-    second_pair: "MG we banklary (amaly) / A04",
-    third_pair: "Elektrotehnika we elektronikanyň esaslary (amaly) / W305",
-  },
-  {
-    first_pair: "Elektrotehnika we elektronikanyň esaslary (umumy) / B11",
-    second_pair:
-      "topar-1: Operasion ulgamlar (tejribe) / A09\ntopar-2: Operasion ulgamlar (tejribe) / B10",
-    third_pair: "Elektrotehnika we elektronikanyň esaslary (umumy) / B11",
-  },
-  {
-    first_pair: "Awtomatiki dolandyryşyň nazaryýeti SD (amaly) / B04",
-    second_pair:
-      "topar-1: MG we banklary (tejribe) / A11\ntopar-2: Elektrotehnika we elektronikanyň esaslary (tejribe) / W305",
-    third_pair: "Operasion ulgamlar (amaly) / A11",
-  },
-  {
-    first_pair: "MG we banklary (umumy) / B11",
-    second_pair: "Bedenterbiýe / FOK",
-    third_pair: "Elektrotehnika we elektronikanyň esaslary (amaly) / W305",
-  },
-  {
-    first_pair: "Önümçilik / praktika",
-  },
-  {
-    first_pair: "Operasion ulgamlar (umumy) / B11",
-    second_pair:
-      "topar-1: Elektrotehnika we elektronikanyň esaslary (tejribe) / W305\ntopar-2: MG we banklary (tejribe) / A09",
-    third_pair: "Iňlis dili (amaly) / A08",
-  },
-];
-export const maydalawjy = [
-  {
-    first_pair: "Filosofiýa (umumy) / B11",
-    second_pair: "Filosofiýa (söhbet) / A04",
-    third_pair: "Elektrotehnika we elektronikanyň esaslary (amaly) / W305",
-  },
-  {
-    first_pair: "Awtomatiki dolandyryşyň nazaryýeti SD (umumy) / B11",
-    second_pair:
-      "topar-1: Operasion ulgamlar (tejribe) A09/\ntopar-2: Operasion ulgamlar (tejribe) / B10",
-    third_pair: "Elektrotehnika we elektronikanyň esaslary (umumy) / B11",
-  },
-  {
-    first_pair:
-      "topar-1: Awtomatiki dolandyryşyň nazaryýeti SD (tejribe) / A08\ntopar-2: Awtomatiki dolandyryşyň nazaryýeti SD (tejribe) / A04",
-    second_pair:
-      "topar-1: MG we banklary (tejribe) / A11\ntopar-2: Elektrotehnika we elektronikanyň esaslary (tejribe) / W305",
-    third_pair: "Operasion ulgamlar (amaly) / A11",
-  },
-  {
-    first_pair: "MG we banklary (umumy) / B11",
-    second_pair: "Bedenterbiýe / FOK",
-    third_pair: "Operasion ulgamlar (umumy) / B11",
-  },
-  {
-    first_pair: "Önümçilik / praktika",
-  },
-  {
-    first_pair: "Operasion ulgamlar (umumy) / B11",
-    second_pair:
-      "topar-1: Elektrotehnika we elektronikanyň esaslary (tejribe) / W305\ntopar-2: MG we banklary (tejribe) / A09",
-    third_pair: "Iňlis dili (amaly) / A08",
-  },
-];
-
 // ! here we need to change start date to date while we starting the simester
-export function getTheNameOfWeek() {
+function getWeekLetter() {
   const currentDate = new Date();
   const startDate = new Date("02-12-2024");
   let days = Math.floor((currentDate - startDate) / (24 * 60 * 60 * 1000));
@@ -81,7 +13,21 @@ export function getTheNameOfWeek() {
   }
 }
 
-export function getArray(name) {
+function getWeekName(weekLetter) {
+  if (weekLetter === "m") return "Maýdalawjy";
+
+  return "Sanawjy";
+}
+
+function getNextWeekLetter() {
+  const currentWeek = getWeekLetter();
+
+  if (currentWeek === "s") return "m";
+
+  return "s";
+}
+
+function getArray(name) {
   if (name === "s") {
     return sanawjy;
   } else {
@@ -89,7 +35,7 @@ export function getArray(name) {
   }
 }
 
-export function getToday(date, week) {
+function getToday(date, week) {
   if (date === 0) {
     return "Dynç güni";
   }
@@ -100,7 +46,7 @@ export function getToday(date, week) {
   }
 }
 
-export function getTomorrow(date, week) {
+function getTomorrow(date, week) {
   date += 1;
 
   if (date === 7) {
@@ -125,4 +71,127 @@ export function getTomorrow(date, week) {
   } else if (week === "s") {
     return sanawjy[date - 1];
   }
+}
+
+// ! setting weeks name
+(function () {
+  // ! important variables that used in html with ID
+  const currentWeekEl = document.getElementById("current-week"),
+    nextWeekEl = document.getElementById("next-week");
+
+  currentWeekEl.textContent = getWeekName(getWeekLetter());
+  nextWeekEl.textContent = getWeekName(getNextWeekLetter());
+})();
+
+// ! setting today and tomorrow's schedules
+(function () {
+  const weekName = getWeekLetter(),
+    todayDate = new Date().getDay();
+
+  const todaySchedule = getToday(todayDate, weekName),
+    tomorrowSchedule = getTomorrow(todayDate, weekName);
+  // ! important variables that used in html with ID
+  const todayEl = document.getElementById("schedule-today"),
+    todayArray = todayEl.querySelectorAll("div"),
+    tomorrowEl = document.getElementById("schedule-tomorrow"),
+    tomorrowArray = tomorrowEl.querySelectorAll("div");
+
+  // ! one pair
+  if (isOnePairOnly(todaySchedule)) {
+    settingContentWithOnePair(todayArray, todaySchedule);
+  }
+  // ! full pairs
+  else {
+    settingContentFullPairs(todayArray, todaySchedule, todayEl);
+  }
+
+  // ? tomorrow
+  // ! one pair
+  if (isOnePairOnly(tomorrowSchedule)) {
+    settingContentWithOnePair(tomorrowArray, tomorrowSchedule);
+  }
+  // ! full pairs
+  else {
+    settingContentFullPairs(tomorrowArray, tomorrowSchedule, tomorrowEl);
+  }
+})();
+
+// ! only for second_pair and third_pair objects key
+function isOnePairOnly(obj) {
+  if (
+    typeof obj.second_pair === "undefined" &&
+    typeof obj.third_pair === "undefined"
+  )
+    return true;
+
+  return false;
+}
+
+// ! setting content if one pair
+function settingContentWithOnePair(element, schedule) {
+  element.forEach((item, i) => {
+    if (i !== 0) {
+      item.remove();
+    } else {
+      item.querySelector("p:first-child").textContent = schedule.first_pair;
+      item.querySelector("p:last-child").remove();
+    }
+  });
+}
+
+// ! setting content of 3 pairs
+function settingContentFullPairs(elementArray, schedule, element) {
+  const separately = (group1, group2) => {
+      const el = document.createElement("div");
+      el.className = "flex items-center flex-col gap-2";
+      el.innerHTML = `
+    <p>
+      <span
+        class="px-2 font-semibold border-primary border-2 rounded-lg bg-secondary text-accent">1</span>
+      ${group1}
+    </p>
+    <p>
+      <span
+        class="px-2 font-semibold border-primary border-2 rounded-lg bg-secondary text-accent">2</span>
+      ${group2}
+    </p>`;
+
+      return el;
+    },
+    together = (pair) => {
+      const el = document.createElement("div");
+      el.className = "flex items-center flex-col gap-2";
+
+      el.innerHTML = `<p>${pair}</p>`;
+
+      return el;
+    };
+
+  elementArray.forEach((item) => {
+    item.remove();
+  });
+
+  // ! 3 pairs initilazing
+  const pairs = ["first_pair", "second_pair", "third_pair"];
+
+  pairs.forEach((pair, i) => {
+    let pairStr = schedule[pair];
+
+    if (doStudyingTogether(pairStr)) {
+      // ! group styding together
+
+      element.append(together(pairStr));
+    } else {
+      // ! group doesn't styding together
+
+      pairStr = pairStr.split("\n");
+      element.append(separately(pairStr[0], pairStr[1]));
+    }
+  });
+}
+
+function doStudyingTogether(pair = "") {
+  if (pair.split("\n").length > 1) return false;
+
+  return true;
 }

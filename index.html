@@ -6,7 +6,7 @@
     <title>2 MUT "B" raspisaniye</title>
     <link rel="stylesheet" href="css/output-style.css" />
   </head>
-  <body class="font-primary py-2 space-y-10 bg-background text-text">
+  <body class="font-primary py-4 space-y-10 bg-background text-text">
     <div class="content flex items-center justify-center text-center">
       <h1 class="text-4xl font-bold">Time-Table</h1>
     </div>
@@ -19,6 +19,7 @@
             <div class="flex items-center justify-between gap-2">
               <p>Şu hepde:</p>
               <p
+                id="current-week"
                 class="text-xl font-semibold px-4 py-2 border-primary border-2 rounded-lg bg-secondary text-accent"
               >
                 Sanawjy
@@ -27,6 +28,7 @@
             <div class="flex items-center justify-between gap-2">
               <p>Indiki hepde:</p>
               <p
+                id="next-week"
                 class="text-xl font-semibold px-4 py-2 border-primary border-2 rounded-lg bg-secondary text-accent"
               >
                 Maýdalawjy
@@ -36,15 +38,19 @@
         </div>
         <!-- ! feat: 1. -->
         <div class="border-2 border-text rounded-lg">
-          <div class="text-lg font-medium *:px-2 *:py-3 text-center relative">
+          <div
+            class="text-lg font-medium *:px-2 *:py-3 text-center relative [&>*:nth-child(3)]:border-t-2 [&>*:nth-child(4)]:border-t-2 *:border-text"
+            id="schedule-today"
+          >
             <!-- ! background text -->
-            <div
+            <span
               class="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 -z-1 text-accent -z-[1] text-7xl opacity-20 flex items-center justify-center text-center min-w-[300px]"
             >
               <p class="w-full">Şu gün</p>
-            </div>
-            <div>
+            </span>
+            <div class="flex items-center flex-col gap-2">
               <p>Filosofiýa (umumy) / B11</p>
+              <p></p>
             </div>
             <div
               class="border-t-2 border-text flex items-center flex-col gap-2"
@@ -64,21 +70,28 @@
                 Operasion ulgamlar (tejribe) / B10
               </p>
             </div>
-            <div class="border-t-2 border-text">
+            <div
+              class="border-t-2 border-text flex items-center flex-col gap-2"
+            >
               <p>Awtomatiki dolandyryşyň nazaryýeti SD (amaly) / B04</p>
+              <p></p>
             </div>
           </div>
         </div>
         <div class="border-2 border-text rounded-lg">
-          <div class="text-lg font-medium *:px-2 *:py-3 text-center relative">
+          <div
+            class="text-lg font-medium *:px-2 *:py-3 text-center relative [&>*:nth-child(3)]:border-t-2 [&>*:nth-child(4)]:border-t-2 *:border-text"
+            id="schedule-tomorrow"
+          >
             <!-- ! background text -->
-            <div
+            <span
               class="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 -z-1 text-accent -z-[1] text-7xl opacity-20 flex items-center justify-center text-center min-w-[300px]"
             >
               <p class="w-full">Ertir</p>
-            </div>
-            <div>
+            </span>
+            <div class="flex items-center flex-col gap-2">
               <p>MG we banklary (umumy) / B11</p>
+              <p></p>
             </div>
             <div
               class="border-t-2 border-text flex items-center flex-col gap-2"
@@ -98,8 +111,11 @@
                 MG we banklary (tejribe) / A09
               </p>
             </div>
-            <div class="border-t-2 border-text">
+            <div
+              class="border-t-2 border-text flex items-center flex-col gap-2"
+            >
               <p>Bedenterbiýe / FOK</p>
+              <p></p>
             </div>
           </div>
         </div>
@@ -107,7 +123,7 @@
       <!-- ! feat: tables of schedule -->
       <div class="content space-y-5">
         <!-- ! sanawjy -->
-        <div
+        <!-- <div
           class="border-2 border-text rounded-lg px-2 py-3 space-y-3 bg-secondary"
         >
           <h2 class="text-center text-3xl text-primary font-semibold">
@@ -225,9 +241,9 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- ! maydalawjy -->
-        <div
+        <!-- <div
           class="border-2 border-text rounded-lg px-2 py-3 space-y-3 bg-secondary"
         >
           <h2 class="text-center text-3xl text-primary font-semibold">
@@ -345,9 +361,11 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
+
+    <script src="./js/schedule.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>
