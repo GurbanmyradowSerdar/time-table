@@ -13,7 +13,7 @@ export const sanawjy = [
   {
     first_pair: "Awtomatiki dolandyryşyň nazaryýeti SD (amaly) / B04",
     second_pair:
-      "topar-1: MG we banklary (tejribe) / A11\ntopar-2: Elektrotehnika we elektronikanyň esaslary (tejribe) / W3??",
+      "topar-1: MG we banklary (tejribe) / A11\ntopar-2: Elektrotehnika we elektronikanyň esaslary (tejribe) / W305",
     third_pair: "Operasion ulgamlar (amaly) / A11",
   },
   {
@@ -27,7 +27,7 @@ export const sanawjy = [
   {
     first_pair: "Operasion ulgamlar (umumy) / B11",
     second_pair:
-      "topar-1: Elektrotehnika we elektronikanyň esaslary (tejribe) / W3??\ntopar-2: MG we banklary (tejribe) / A09",
+      "topar-1: Elektrotehnika we elektronikanyň esaslary (tejribe) / W305\ntopar-2: MG we banklary (tejribe) / A09",
     third_pair: "Iňlis dili (amaly) / A08",
   },
 ];
@@ -47,7 +47,7 @@ export const maydalawjy = [
     first_pair:
       "topar-1: Awtomatiki dolandyryşyň nazaryýeti SD (tejribe) / A08\ntopar-2: Awtomatiki dolandyryşyň nazaryýeti SD (tejribe) / A04",
     second_pair:
-      "topar-1: MG we banklary (tejribe) / A11\ntopar-2: Elektrotehnika we elektronikanyň esaslary (tejribe) / W3??",
+      "topar-1: MG we banklary (tejribe) / A11\ntopar-2: Elektrotehnika we elektronikanyň esaslary (tejribe) / W305",
     third_pair: "Operasion ulgamlar (amaly) / A11",
   },
   {
