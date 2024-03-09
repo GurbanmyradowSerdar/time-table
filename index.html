@@ -13,9 +13,13 @@
 
     <div class="space-y-10">
       <!-- ! feat: 1. schedule of today and tomorrow, 2. name of the week this week and after this week -->
-      <div class="content space-y-3">
+      <div
+        class="content space-y-3 md:space-y-0 md:grid md:grid-cols-2 md:grid-rows-3 md:gap-3"
+      >
         <!-- ! feat: 2. -->
-        <div class="border-2 border-text rounded-lg px-2 py-3">
+        <div
+          class="border-2 border-text rounded-lg px-2 py-3 md:col-span-2 md:row-span-1"
+        >
           <div class="text-lg space-y-3 font-medium">
             <div class="flex items-center justify-between gap-2">
               <p>Şu hepde:</p>
@@ -38,7 +42,9 @@
           </div>
         </div>
         <!-- ! feat: 1. -->
-        <div class="border-2 border-text rounded-lg">
+        <div
+          class="border-2 border-text rounded-lg md:col-span-1 md:row-span-2"
+        >
           <div
             class="text-lg font-medium *:px-2 *:py-3 text-center relative [&>*:nth-child(3)]:border-t-2 [&>*:nth-child(4)]:border-t-2 *:border-text"
             id="schedule-today"
@@ -79,7 +85,9 @@
             </div>
           </div>
         </div>
-        <div class="border-2 border-text rounded-lg">
+        <div
+          class="border-2 border-text rounded-lg md:col-span-1 md:row-span-2"
+        >
           <div
             class="text-lg font-medium *:px-2 *:py-3 text-center relative [&>*:nth-child(3)]:border-t-2 [&>*:nth-child(4)]:border-t-2 *:border-text"
             id="schedule-tomorrow"
@@ -123,7 +131,7 @@
       </div>
 
       <!-- ! warning text -->
-      <div class="flex flex-col items-center gap-5">
+      <div class="flex flex-col items-center gap-5 content">
         <h2 class="text-center text-3xl uppercase tracking-widest font-bold">
           sanawjy we maydalawjy hepdeleriň raspisaniyasy
         </h2>
