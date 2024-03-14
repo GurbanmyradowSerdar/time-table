@@ -77,17 +77,18 @@ function getTomorrow(date, week) {
 }
 
 // ! setting weeks name
-(function () {
+function settingWeeksName() {
   // ! important variables that used in html with ID
   const currentWeekEl = document.getElementById("current-week"),
     nextWeekEl = document.getElementById("next-week");
 
   currentWeekEl.textContent = getWeekName(getWeekLetter());
   nextWeekEl.textContent = getWeekName(getNextWeekLetter());
-})();
+}
+settingWeeksName();
 
 // ! setting today and tomorrow's schedules
-(function () {
+function settingTodayAndTomorrow() {
   const weekName = getWeekLetter(),
     todayDate = new Date().getDay();
 
@@ -117,7 +118,8 @@ function getTomorrow(date, week) {
   else {
     settingContentFullPairs(tomorrowArray, tomorrowSchedule, tomorrowEl);
   }
-})();
+}
+settingTodayAndTomorrow();
 
 // ! only for second_pair and third_pair objects key
 function isOnePairOnly(obj) {

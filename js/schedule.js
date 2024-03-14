@@ -7,13 +7,13 @@ const sanawjy = [
   {
     first_pair: "Elektrotehnika we elektronikanyň esaslary (umumy) / B11",
     second_pair:
-      "topar-1: Operasion ulgamlar (tejribe) / A09\ntopar-2: Operasion ulgamlar (tejribe) / B10",
+      "Operasion ulgamlar (tejribe) / A09\nOperasion ulgamlar (tejribe) / B10",
     third_pair: "Elektrotehnika we elektronikanyň esaslary (umumy) / B11",
   },
   {
     first_pair: "Awtomatiki dolandyryşyň nazaryýeti SD (amaly) / B04",
     second_pair:
-      "topar-1: MG we banklary (tejribe) / A11\ntopar-2: Elektrotehnika we elektronikanyň esaslary (tejribe) / W305",
+      "MG we banklary (tejribe) / A11\nElektrotehnika we elektronikanyň esaslary (tejribe) / W305",
     third_pair: "Operasion ulgamlar (amaly) / A11",
   },
   {
@@ -27,7 +27,7 @@ const sanawjy = [
   {
     first_pair: "Operasion ulgamlar (umumy) / B11",
     second_pair:
-      "topar-1: Elektrotehnika we elektronikanyň esaslary (tejribe) / W305\ntopar-2: MG we banklary (tejribe) / A09",
+      "Elektrotehnika we elektronikanyň esaslary (tejribe) / W305\nMG we banklary (tejribe) / A09",
     third_pair: "Iňlis dili (amaly) / A08",
   },
 ];
@@ -40,14 +40,14 @@ const maydalawjy = [
   {
     first_pair: "Awtomatiki dolandyryşyň nazaryýeti SD (umumy) / B11",
     second_pair:
-      "topar-1: Operasion ulgamlar (tejribe) A09/\ntopar-2: Operasion ulgamlar (tejribe) / B10",
+      "Operasion ulgamlar (tejribe) A09/\nOperasion ulgamlar (tejribe) / B10",
     third_pair: "Elektrotehnika we elektronikanyň esaslary (umumy) / B11",
   },
   {
     first_pair:
-      "topar-1: Awtomatiki dolandyryşyň nazaryýeti SD (tejribe) / A08\ntopar-2: Awtomatiki dolandyryşyň nazaryýeti SD (tejribe) / A04",
+      "Awtomatiki dolandyryşyň nazaryýeti SD (tejribe) / A08\nAwtomatiki dolandyryşyň nazaryýeti SD (tejribe) / A04",
     second_pair:
-      "topar-1: MG we banklary (tejribe) / A11\ntopar-2: Elektrotehnika we elektronikanyň esaslary (tejribe) / W305",
+      "MG we banklary (tejribe) / A11\nElektrotehnika we elektronikanyň esaslary (tejribe) / W305",
     third_pair: "Operasion ulgamlar (amaly) / A11",
   },
   {
@@ -61,7 +61,7 @@ const maydalawjy = [
   {
     first_pair: "Operasion ulgamlar (umumy) / B11",
     second_pair:
-      "topar-1: Elektrotehnika we elektronikanyň esaslary (tejribe) / W305\ntopar-2: MG we banklary (tejribe) / A09",
+      "Elektrotehnika we elektronikanyň esaslary (tejribe) / W305\nMG we banklary (tejribe) / A09",
     third_pair: "Iňlis dili (amaly) / A08",
   },
 ];
