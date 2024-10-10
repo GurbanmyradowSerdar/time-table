@@ -711,6 +711,10 @@ video {
      object-fit: cover;
 }
 
+.p-10{
+  padding: 2.5rem;
+}
+
 .px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -744,6 +748,11 @@ video {
   font-family: Roboto Mono, sans-serif;
 }
 
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-3xl{
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -767,11 +776,6 @@ video {
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-
-.text-2xl{
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .font-bold{
@@ -799,21 +803,6 @@ video {
   color: rgb(67 59 255 / var(--tw-text-opacity));
 }
 
-.text-primary{
-  --tw-text-opacity: 1;
-  color: rgb(47 39 206 / var(--tw-text-opacity));
-}
-
-.text-text{
-  --tw-text-opacity: 1;
-  color: rgb(5 3 21 / var(--tw-text-opacity));
-}
-
-.text-purple-700{
-  --tw-text-opacity: 1;
-  color: rgb(126 34 206 / var(--tw-text-opacity));
-}
-
 .text-blue-700{
   --tw-text-opacity: 1;
   color: rgb(29 78 216 / var(--tw-text-opacity));
@@ -822,6 +811,21 @@ video {
 .text-green-700{
   --tw-text-opacity: 1;
   color: rgb(21 128 61 / var(--tw-text-opacity));
+}
+
+.text-primary{
+  --tw-text-opacity: 1;
+  color: rgb(47 39 206 / var(--tw-text-opacity));
+}
+
+.text-purple-700{
+  --tw-text-opacity: 1;
+  color: rgb(126 34 206 / var(--tw-text-opacity));
+}
+
+.text-text{
+  --tw-text-opacity: 1;
+  color: rgb(5 3 21 / var(--tw-text-opacity));
 }
 
 .opacity-20{

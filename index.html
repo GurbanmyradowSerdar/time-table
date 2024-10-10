@@ -3,17 +3,363 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>2 MUT "B" raspisaniye</title>
+    <title>3 MUT "B" raspisaniye</title>
     <link rel="stylesheet" href="css/output-style.css" />
   </head>
   <body class="font-primary py-4 space-y-10 bg-background text-text">
-    <div
-      class="content flex flex-col gap-5 items-center justify-center text-center"
-    >
+    <div class="content flex items-center justify-center text-center">
       <h1 class="text-4xl font-bold">Time-Table</h1>
-      <h2 class="text-2xl font-bold text-purple-700">Sessiýa</h2>
-      <h2 class="text-2xl font-bold text-green-700">Praktika</h2>
-      <h2 class="text-2xl font-bold text-blue-700">Dynç</h2>
+    </div>
+
+    <div class="space-y-10">
+      <!-- ! feat: 1. schedule of today and tomorrow, 2. name of the week this week and after this week -->
+      <div
+        class="content space-y-3 md:space-y-0 md:grid md:grid-cols-2 md:grid-rows-3 md:gap-3"
+      >
+        <!-- ! feat: 2. -->
+        <div
+          class="border-2 border-text rounded-lg px-2 py-3 md:col-span-2 md:row-span-1"
+        >
+          <div
+            class="text-lg space-y-3 font-medium size-full flex flex-col justify-between"
+          >
+            <div class="flex items-center justify-between gap-2">
+              <p>Şu hepde:</p>
+              <p
+                id="current-week"
+                class="text-xl font-semibold px-4 py-2 border-primary border-2 rounded-lg bg-secondary text-accent"
+              >
+                Sanawjy
+              </p>
+            </div>
+            <div class="flex items-center justify-between gap-2">
+              <p>Indiki hepde:</p>
+              <p
+                id="next-week"
+                class="text-xl font-semibold px-4 py-2 border-primary border-2 rounded-lg bg-secondary text-accent"
+              >
+                Maýdalawjy
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- ! feat: 1. -->
+        <div
+          class="border-2 border-text rounded-lg md:col-span-1 md:row-span-2"
+        >
+          <div
+            class="text-lg font-medium flex flex-col justify-between size-full *:px-2 *:py-3 text-center relative [&>*:nth-child(3)]:border-t-2 [&>*:nth-child(4)]:border-t-2 *:border-text"
+            id="schedule-today"
+          >
+            <!-- ! background text -->
+            <span
+              class="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 -z-1 text-accent -z-[1] text-7xl opacity-20 flex items-center justify-center text-center min-w-[300px]"
+            >
+              <p class="w-full">Şu gün</p>
+            </span>
+            <div class="flex items-center flex-col gap-2">
+              <p>Filosofiýa (umumy) / B11</p>
+              <p></p>
+            </div>
+            <div
+              class="border-t-2 border-text flex items-center flex-col gap-2"
+            >
+              <p>
+                <span
+                  class="px-2 font-semibold border-primary border-2 rounded-lg bg-secondary text-accent"
+                  >1</span
+                >
+                Operasion ulgamlar (tejribe) / A09
+              </p>
+              <p>
+                <span
+                  class="px-2 font-semibold border-primary border-2 rounded-lg bg-secondary text-accent"
+                  >2</span
+                >
+                Operasion ulgamlar (tejribe) / B10
+              </p>
+            </div>
+            <div
+              class="border-t-2 border-text flex items-center flex-col gap-2"
+            >
+              <p>Awtomatiki dolandyryşyň nazaryýeti SD (amaly) / B04</p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-2 border-text rounded-lg md:col-span-1 md:row-span-2"
+        >
+          <div
+            class="text-lg font-medium flex flex-col justify-between size-full *:px-2 *:py-3 text-center relative [&>*:nth-child(3)]:border-t-2 [&>*:nth-child(4)]:border-t-2 *:border-text"
+            id="schedule-tomorrow"
+          >
+            <!-- ! background text -->
+            <span
+              class="absolute top-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 -z-1 text-accent -z-[1] text-7xl opacity-20 flex items-center justify-center text-center min-w-[300px]"
+            >
+              <p class="w-full">Ertir</p>
+            </span>
+            <div class="flex items-center flex-col gap-2">
+              <p>MG we banklary (umumy) / B11</p>
+              <p></p>
+            </div>
+            <div
+              class="border-t-2 border-text flex items-center flex-col gap-2"
+            >
+              <p>
+                <span
+                  class="px-2 font-semibold border-primary border-2 rounded-lg bg-secondary text-accent"
+                  >1</span
+                >
+                Elektrotehnika we elektronikanyň esaslary (tejribe) / W3??
+              </p>
+              <p>
+                <span
+                  class="px-2 font-semibold border-primary border-2 rounded-lg bg-secondary text-accent"
+                  >2</span
+                >
+                MG we banklary (tejribe) / A09
+              </p>
+            </div>
+            <div
+              class="border-t-2 border-text flex items-center flex-col gap-2"
+            >
+              <p>Bedenterbiýe / FOK</p>
+              <p></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ! warning text -->
+      <div class="flex flex-col items-center gap-5 content">
+        <h2 class="text-center text-3xl uppercase tracking-widest font-bold">
+          sanawjy we maydalawjy hepdeleriň raspisaniyasy
+        </h2>
+        <div class="size-14 animate-bounce">
+          <svg
+            class="size-full object-cover"
+            width="800px"
+            height="800px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 4V20M12 20L8 16M12 20L16 16"
+              class="stroke-primary"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+      <!-- ! feat: tables of schedule -->
+      <div class="content space-y-10">
+        <!-- ! sanawjy -->
+        <div
+          class="border-2 border-text rounded-lg px-2 py-3 space-y-3 bg-secondary"
+        >
+          <h2 class="text-center text-3xl text-primary font-bold">Sanawjy</h2>
+          <!-- ! monday -->
+          <div class="border-2 bg-background border-text rounded-lg">
+            <div class="text-lg font-medium *:px-2 *:py-3 text-center">
+              <div>
+                <p>Syýasaty öwreniş (umumy) / B07</p>
+              </div>
+              <div
+                class="border-t-2 border-text flex items-center flex-col gap-2"
+              >
+                <p>Ulgamlaýyn programmirleme (amaly) / BG2</p>
+              </div>
+              <div class="border-t-2 border-text">
+                <p>H.T.T (amaly) / BG2</p>
+              </div>
+            </div>
+          </div>
+          <!-- ! tuesday -->
+          <div class="border-2 bg-background border-text rounded-lg">
+            <div class="text-lg font-medium *:px-2 *:py-3 text-center">
+              <div>
+                <p>Materiallaryň garşylygy (umumy) / B11</p>
+              </div>
+              <div
+                class="border-t-2 border-text flex items-center flex-col gap-2"
+              >
+                <p>
+                  <span
+                    class="px-2 font-semibold border-primary border-2 rounded-lg bg-secondary text-accent"
+                    >1</span
+                  >
+                  A.M.U.Y (tejribe) / B?
+                </p>
+                <p>
+                  <span
+                    class="px-2 font-semibold border-primary border-2 rounded-lg bg-secondary text-accent"
+                    >2</span
+                  >
+                  A.M.U.Y (tejribe) / B?
+                </p>
+              </div>
+              <div class="border-t-2 border-text">
+                <p>Binagärlik (amaly) / A06</p>
+              </div>
+            </div>
+          </div>
+          <!-- ! wednesday -->
+          <div class="border-2 bg-background border-text rounded-lg">
+            <div class="text-lg font-medium *:px-2 *:py-3 text-center">
+              <div>
+                <p>Binagärlik (umumy) / B07</p>
+              </div>
+              <div
+                class="border-t-2 border-text flex items-center flex-col gap-2"
+              >
+                <p>Operasion ulgamlary (umumy) / B07</p>
+              </div>
+              <div class="border-t-2 border-text">
+                <p>H.T.T (tejribe) / BG2</p>
+              </div>
+            </div>
+          </div>
+          <!-- ! thursday -->
+          <div class="border-2 bg-background border-text rounded-lg">
+            <div class="text-lg font-medium *:px-2 *:py-3 text-center">
+              <div>
+                <p>H.T.T (umumy) / B07</p>
+              </div>
+              <div
+                class="border-t-2 border-text flex items-center flex-col gap-2"
+              >
+                <p>Rus dili (amaly) / B06</p>
+              </div>
+            </div>
+          </div>
+          <!-- ! friday -->
+          <div class="border-2 bg-background border-text rounded-lg">
+            <div class="text-lg font-medium *:px-2 *:py-3 text-center">
+              <div>
+                <p>Ulgamlaýyn programmirleme (umumy) / B07</p>
+              </div>
+              <div
+                class="border-t-2 border-text flex items-center flex-col gap-2"
+              >
+                <p>Sanly ykdysadyýet (umumy) / B07</p>
+              </div>
+            </div>
+          </div>
+          <!-- ! saturday -->
+          <div class="border-2 bg-background border-text rounded-lg">
+            <div class="text-lg font-medium *:px-2 *:py-3 text-center">
+              <div>
+                <p>Ulgamlaýyn programmirleme (tejribe) / BG2</p>
+              </div>
+              <div
+                class="border-t-2 border-text flex items-center flex-col gap-2"
+              >
+                <p>Operasion ulgamlary (tejribe) / B03</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ! maydalawjy -->
+        <div
+          class="border-2 border-text rounded-lg px-2 py-3 space-y-3 bg-secondary"
+        >
+          <h2 class="text-center text-3xl text-primary font-bold">
+            Maýdalawjy
+          </h2>
+          <!-- ! monday -->
+          <div class="border-2 bg-background border-text rounded-lg">
+            <div class="text-lg font-medium *:px-2 *:py-3 text-center">
+              <div>
+                <p>A.M.U.Y (amaly) / B11</p>
+              </div>
+              <div
+                class="border-t-2 border-text flex items-center flex-col gap-2"
+              >
+                <p>Sanly ykdysadyýet (amaly) / B05</p>
+              </div>
+              <div class="border-t-2 border-text">
+                <p>Operasion ulgamlary (amaly) / A09</p>
+              </div>
+            </div>
+          </div>
+          <!-- ! tuesday -->
+          <div class="border-2 bg-background border-text rounded-lg">
+            <div class="text-lg font-medium *:px-2 *:py-3 text-center">
+              <div>
+                <p>Materiallaryň garşylygy (umumy) / B11</p>
+              </div>
+              <div
+                class="border-t-2 border-text flex items-center flex-col gap-2"
+              >
+                <p>Syýasaty öwreniş (amaly) / A06</p>
+              </div>
+              <div class="border-t-2 border-text">
+                <p>Materiallaryň garşylygy (amaly) / A06</p>
+              </div>
+            </div>
+          </div>
+          <!-- ! wednesday -->
+          <div class="border-2 bg-background border-text rounded-lg">
+            <div class="text-lg font-medium *:px-2 *:py-3 text-center">
+              <div class="flex items-center flex-col gap-2">
+                <p>Binagärlik (umumy) / B07</p>
+              </div>
+              <div
+                class="border-t-2 border-text flex items-center flex-col gap-2"
+              >
+                <p>Operasion ulgamlary (umumy) / B07</p>
+              </div>
+              <div class="border-t-2 border-text">
+                <p>H.T.T (tejribe) / BG2</p>
+              </div>
+            </div>
+          </div>
+          <!-- ! thursday -->
+          <div class="border-2 bg-background border-text rounded-lg">
+            <div class="text-lg font-medium *:px-2 *:py-3 text-center">
+              <div>
+                <p>H.T.T (umumy) / B07</p>
+              </div>
+              <div
+                class="border-t-2 border-text flex items-center flex-col gap-2"
+              >
+                <p>Rus dili (amaly) / B06</p>
+              </div>
+            </div>
+          </div>
+          <!-- ! friday -->
+          <div class="border-2 bg-background border-text rounded-lg">
+            <div class="text-lg font-medium *:px-2 *:py-3 text-center">
+              <div>
+                <p>Ulgamlaýyn programmirleme (umumy) / B07</p>
+              </div>
+              <div
+                class="border-t-2 border-text flex items-center flex-col gap-2"
+              >
+                <p>A.M.U.Y (umumy) / B07</p>
+              </div>
+            </div>
+          </div>
+          <!-- ! saturday -->
+          <div class="border-2 bg-background border-text rounded-lg">
+            <div class="text-lg font-medium *:px-2 *:py-3 text-center">
+              <div>
+                <p>Ulgamlaýyn programmirleme (tejribe) / BG2</p>
+              </div>
+              <div
+                class="border-t-2 border-text flex items-center flex-col gap-2"
+              >
+                <p>Operasion ulgamlary (tejribe) / B03</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="./js/schedule.js"></script>
