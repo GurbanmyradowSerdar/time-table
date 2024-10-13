@@ -106,7 +106,13 @@ function settingTodayAndTomorrow() {
   }
   // ! full pairs
   else {
-    settingContentFullPairs(todayArray, todaySchedule, todayEl);
+    const pairs = Object.keys(todaySchedule).length;
+    settingContentFullPairs(
+      todayArray,
+      todaySchedule,
+      todayEl,
+      pairs === 2 ? true : false
+    );
   }
 
   // ? tomorrow
@@ -116,7 +122,13 @@ function settingTodayAndTomorrow() {
   }
   // ! full pairs
   else {
-    settingContentFullPairs(tomorrowArray, tomorrowSchedule, tomorrowEl);
+    const pairs = Object.keys(tomorrowSchedule).length;
+    settingContentFullPairs(
+      tomorrowArray,
+      tomorrowSchedule,
+      tomorrowEl,
+      pairs === 2 ? true : false
+    );
   }
 }
 settingTodayAndTomorrow();
@@ -145,7 +157,7 @@ function settingContentWithOnePair(element, schedule) {
 }
 
 // ! setting content of 3 pairs
-function settingContentFullPairs(elementArray, schedule, element) {
+function settingContentFullPairs(elementArray, schedule, element, isTwoPairs) {
   const separately = (group1, group2) => {
       const el = document.createElement("div");
       el.className = "flex items-center flex-col gap-2";
@@ -177,8 +189,9 @@ function settingContentFullPairs(elementArray, schedule, element) {
   });
 
   // ! 3 pairs initilazing
-  // const pairs = ["first_pair", "second_pair", "third_pair"];
-  const pairs = ["first_pair", "second_pair"]; // ! comment it if there are no any 2 pairs day
+  const pairs = isTwoPairs
+    ? ["first_pair", "second_pair"]
+    : ["first_pair", "second_pair", "third_pair"];
 
   pairs.forEach((pair, i) => {
     let pairStr = schedule[pair];
